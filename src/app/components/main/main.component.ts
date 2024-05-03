@@ -11,6 +11,8 @@ import { ProductsService } from '../../services/products.service';
 export class MainComponent {
   constructor(public producstService: ProductsService){}
 
+  datos:any = [];
+
   ngOnInit(){
     console.log("Cargando ngOnInit...");
     this.obtenerDatos();
@@ -21,10 +23,10 @@ export class MainComponent {
     this.producstService.retornar().subscribe({
       next: this.successRequest.bind(this),
       error: (err) => {console.log(err)}
-    })
+    });
   }
 
   successRequest(data:any):void{
-    console.log("Datos recibidos del API", JSON.stringify(data))
+    console.log("Datos recibidos del API", data.products);
   }
 }
