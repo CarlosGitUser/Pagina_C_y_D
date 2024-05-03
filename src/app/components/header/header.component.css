@@ -1,0 +1,18 @@
+.navbar-brand img {
+    max-height: 22%; 
+    max-width: 20%; 
+    margin-right: 10px; 
+  }
+
+.navbar-nav {
+    width: 100%;
+  }
+
+.navbar-nav .nav-item {
+   margin-bottom: 5px; 
+   font-size: 15px;
+   text-align: center;
+   margin-top: 20px;
+   width: 90px;
+   font-family: Arial, Helvetica, sans-serif;
+  }
