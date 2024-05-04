@@ -1,39 +1,35 @@
 <div class="row">
-  <form class="col s12">
+  <form class="col s12" (ngSubmit)="validacion()">
       <div class="row">
           <div class="input-field col s12">
-              <input id="name" type="text" class="validate">
+              <input id="name" type="text" class="validate" [(ngModel)] = "cita.nombre" name="nombre">
               <label for="name">Nombre</label>
           </div>
       </div>
       <div class="row">
           <div class="input-field col s6">
-              <input id="start_date" type="date" class="datepicker">
+              <input id="start_date" type="date" class="datepicker" [(ngModel)] = "cita.fecha" name="fecha">
               <label for="start_date">Fecha de inicio</label>
           </div>
           <div class="input-field col s6">
-              <input id="start_time" type="time" class="timepicker">
+              <input id="start_time" type="time" class="timepicker" [(ngModel)] = "cita.hora" name="hora">
               <label for="start_time">Hora de inicio</label>
           </div>
       </div>
       <div class="row">
           <div class="input-field col s6">
-              <input id="end_date" type="date" class="datepicker">
-              <label for="end_date">Fecha de fin</label>
-          </div>
-          <div class="input-field col s6">
-              <input id="quantity" type="number" class="validate">
+              <input id="quantity" type="number" class="validate" [(ngModel)] = "cita.canthuespedes" name="canthuespedes">
               <label for="quantity">Cantidad</label>
           </div>
       </div>
       <div class="row">
           <div class="input-field col s12">
-              <input id="location" type="text" class="validate">
+              <input id="location" type="text" class="validate" [(ngModel)] = "cita.lugar" name="lugar">
               <label for="location">Lugar del Hospedaje</label>
           </div>
       </div>
       <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
-          <i class="material-icons right">send</i>
+          <!-- <i class="material-icons right">send</i> -->
       </button>
   </form>
 </div>
