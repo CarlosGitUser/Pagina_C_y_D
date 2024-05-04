@@ -5,12 +5,13 @@ import { HeaderComponent } from './components/header/header.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FormularioComponent } from './components/formulario/formulario.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent,BreadcrumbComponent,CardsComponent, FooterComponent],
+  imports: [RouterOutlet, HeaderComponent,BreadcrumbComponent,CardsComponent, FormularioComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
