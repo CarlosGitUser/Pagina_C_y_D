@@ -131,4 +131,19 @@ a
     grid-gap: 20px;
 }
   
+
+
+.product-tumb {
+    position: relative;
+    width: 100%; /* Ajustamos el ancho del contenedor para ocupar todo el espacio disponible */
+    height: 200px; /* Altura deseada para la imagen */
+  }
+  
+  .product-tumb img {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: 100%; /* La imagen ocupará toda la altura del contenedor */
+    object-fit: cover; /* Esto asegura que la imagen se ajuste al contenedor sin distorsionarse */
+  }
+  
+  
   
