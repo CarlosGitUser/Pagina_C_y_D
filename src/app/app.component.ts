@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+declare var M: any;
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
@@ -15,6 +16,8 @@ import { FooterComponent } from './components/footer/footer.component';
 })
 export class AppComponent {
   title = 'ProyectoCasas';
-
+  ngOnInit() {
+      M.AutoInit();
+  }
 
 }
