@@ -5,6 +5,15 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    
+  }
+  .row{
+    margin-left: 90px;
+    margin-right: 90px;
+    background-color: beige;
+    border-radius: 15px;
+  
+
   }
   
   .input-field input[type=text],
@@ -70,9 +79,11 @@
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    margin-bottom: 40px;
   }
   
   .btn:hover {
     background-color: #2bbbad;
   }
+  
   
