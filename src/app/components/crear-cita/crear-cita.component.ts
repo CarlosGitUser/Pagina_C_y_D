@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
 
@@ -10,6 +10,6 @@ import { HeaderComponent } from '../header/header.component';
   templateUrl: './crear-cita.component.html',
   styleUrl: './crear-cita.component.css'
 })
-export class CrearCitaComponent {
-
+export class CrearCitaComponent{
+  
 }
