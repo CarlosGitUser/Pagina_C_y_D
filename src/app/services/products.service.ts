@@ -6,8 +6,8 @@ import { take } from 'rxjs';
 })
 export class ProductsService {
 
-  urlAPI:string = "https://apicyd.free.beeceptor.com";
-  //urlAPI:string = "https://testapicarlos.free.beeceptor.com";
+  //urlAPI:string = "https://apicyd.free.beeceptor.com";
+  urlAPI:string = "https://testapicarlos.free.beeceptor.com";
   constructor(private http: HttpClient) { }
 
   retornar(){
