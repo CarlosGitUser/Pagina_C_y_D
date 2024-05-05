@@ -134,22 +134,22 @@ a
 .grid-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Distribuye los cards de manera uniforme a lo largo del contenedor */
+    justify-content: space-between; 
   }
   
   .product-card {
-    width: calc(33.333% - 20px); /* Establece el ancho de cada card. Puedes ajustar el porcentaje según sea necesario */
-    margin-bottom: 20px; /* Agrega espacio entre los cards */
-    box-sizing: border-box; /* Incluye los márgenes en el tamaño total del elemento */
+    width: calc(33.333% - 20px); 
+    margin-bottom: 20px; 
+    box-sizing: border-box; 
   }
   
   .product-card .div-sin-margen {
-    margin: 0; /* Elimina el margen interno del contenedor de imagen */
+    margin: 0; 
   }
   
   .product-card img {
-    width: 100%; /* Ajusta la imagen para ocupar todo el ancho del contenedor */
-    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+    width: 100%; 
+    height: auto;
   }
   
   
