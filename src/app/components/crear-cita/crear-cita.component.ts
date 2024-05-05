@@ -60,8 +60,47 @@ export class CrearCitaComponent{
   }
 
   validarHora(hora:string):boolean{
-    if(hora != null){
-      console.log("a");
+
+
+    if(hora != null && (typeof hora)=='string'){
+
+      let myHora = hora.split(":");
+      if(parseInt(myHora[0]) >= 8 && parseInt(myHora[0])<=20){
+        //console.log(myHora);
+        return true;
+      }
+    }
+    return false;
+  }
+
+  validarHuespedes(cantidad:number):boolean{
+    if(typeof cantidad == 'number' && cantidad > 0 && cantidad<=16){
+      console.log(typeof cantidad + " dato " + cantidad);
+      return false;
+    }
+    return true;
+  }
+
+  validarCorreo(correo:string):boolean{
+    //console.log(typeof correo);
+    if(typeof correo == 'string'){
+      if(correo.includes("@") && (correo.includes(".com") || correo.includes(".mx"))){
+        return false;
+      }
+    }
+    return true;
+  }
+
+  validarTelefono(telefono: any): boolean {
+    if (typeof telefono === 'number' || typeof telefono === 'string') {
+      // Eliminar todos los caracteres no numéricos de la cadena del teléfono
+      let numeroTelefono = telefono.toString().replace(/\D/g, '');
+
+      // Verificar si la longitud del número de teléfono es 10
+      if (numeroTelefono.length === 10) {
+        console.log("Es número y es válido");
+        return true;
+      }
     }
     return false;
   }
