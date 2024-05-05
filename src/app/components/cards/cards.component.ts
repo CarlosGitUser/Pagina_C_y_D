@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-cards',
   standalone: true,
-  imports: [],
+  imports: [CurrencyPipe],
   templateUrl: './cards.component.html',
   styleUrl: './cards.component.css'
 })
