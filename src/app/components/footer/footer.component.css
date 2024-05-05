@@ -1,6 +1,8 @@
 .page-wrapper {
     position: relative;
     min-height: 100vh;
+   
+
 }
 
 footer p, footer strong, footer b, footer {
@@ -12,7 +14,7 @@ footer p, footer strong, footer b, footer {
     background-size: cover;
     background-position: center;
     padding: 30px 0 20px; /* Ajuste del padding */
-    font-family: rubik;
+    font-family: Hind Siliguri
 }
 
 .footer {
@@ -23,7 +25,7 @@ footer p, footer strong, footer b, footer {
     color: #000000; /* Cambio del color del texto del footer */
     padding: 20px;
     margin-bottom: 0;
-    font-family: Radio Canada Big, sans-serif;
+    font-family: Hind Siliguri
 }
 
 .footer-top, .footer-bottom {
@@ -35,7 +37,7 @@ footer p, footer strong, footer b, footer {
     border-top: 1px solid #313646;
     background-color: #dfdfdf !important;
     color: #000000;
-    font-family: rubik;
+    font-family: Hind Siliguri;
     padding-top: 15px;
 }
 
