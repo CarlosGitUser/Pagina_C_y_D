@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { CurrencyPipe } from '@angular/common';
+import { BreadcrumbComponent } from '../breadcrumb/breadcrumb.component';
 
 @Component({
   selector: 'app-cards',
   standalone: true,
-  imports: [CurrencyPipe],
+  imports: [CurrencyPipe, BreadcrumbComponent],
   templateUrl: './cards.component.html',
   styleUrl: './cards.component.css'
 })
