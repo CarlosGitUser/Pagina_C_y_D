@@ -1,46 +1,66 @@
 <div class="row">
-  <form class="col s12" (ngSubmit)="validacion()">
+  <form class="col s12" (ngSubmit)="crearCita()" #form="ngForm">
       <div class="row">
           <div class="input-field col s12">
-              <input id="name" type="text" class="validate" [(ngModel)] = "cita.nombre" name="nombre">
+              <input id="name" type="text" class="validate" [(ngModel)] = "cita.nombre" name="nombre" #name="ngModel">
               <label for="name">Nombre</label>
+              <div class="alert alert-danger mt-2" [hidden]="name.untouched"
+              [ngClass]="{'mostrar':validarNombre(name.value), 'noMostrar':!validarNombre(name.value)}">
+                Ingresa un nombre valido
+              </div>
           </div>
       </div>
       <div class="row">
           <div class="input-field col s6">
-              <input id="start_date" type="date" class="datepicker" [(ngModel)] = "cita.fecha" name="fecha">
-              <label for="start_date">Fecha de inicio</label>
+              <input id="start_date" type="date" class="datepicker" [(ngModel)] = "cita.fecha" name="fecha" #date="ngModel">
+              <label for="start_date">Fecha de la cita</label>
+              <div class="alert alert-danger mt-2" [hidden]="date.untouched"
+              [ngClass]="{'mostrar' : validarFecha(date.value), 'noMostrar' :!validarFecha(date.value)}"
+              >Por favor ingresa una fecha valida
+            </div>
           </div>
           <div class="input-field col s6">
 
-              <input id="start_time" type="time" class="timepicker" [(ngModel)] = "cita.hora" name="hora">
+              <input id="start_time" type="time" class="timepicker" [(ngModel)] = "cita.hora" name="hora" #hora="ngModel">
               <label for="start_time">Hora de inicio</label>
+              <div class="alert alert-danger mt-2" [hidden]="hora.untouched"
+              >Por favor ingresa una hora valida</div>
           </div>
       </div>
       <div class="row">
           <div class="input-field col s6">
-              <input id="quantity" type="number" class="validate" [(ngModel)] = "cita.canthuespedes" name="canthuespedes">
-              <label for="quantity">Cantidad</label>
+              <input id="quantity" type="number" class="validate" [(ngModel)] = "cita.canthuespedes" name="canthuespedes" #huespedes="ngModel">
+              <label for="quantity">Cantidad de huespedes</label>
+              <div class="alert alert-danger mt-2" [hidden]="huespedes.valid || huespedes.untouched">Por favor ingresa un numero valido</div>
+
           </div>
       </div>
       <div class="row">
           <div class="input-field col s6">
-              <input id="email" type="email" class="validate">
+              <input id="email" type="email" class="validate" [(ngModel)]="cita.email" #email="ngModel" name="email">
               <label for="email">Correo electrónico</label>
+              <div class="alert alert-danger mt-2" [hidden]="email.valid || email.untouched">Por favor ingresa un email valido</div>
+
           </div>
           <div class="input-field col s6">
-              <input id="phone" type="tel" class="validate">
+              <input id="phone" type="tel" class="validate" [(ngModel)]="cita.telefono" #telefono="ngModel" name="telefono">
               <label for="phone">Teléfono</label>
+              <div class="alert alert-danger mt-2" [hidden]="telefono.valid || telefono.untouched">Este campo es obligatiorio</div>
+
           </div>
       </div>
       <div class="row">
           <div class="input-field col s12">
-              <input id="location" type="text" class="validate" [(ngModel)] = "cita.lugar" name="lugar">
+              <input id="location" type="text" class="validate" [(ngModel)] = "cita.lugar" name="lugar" #place="ngModel">
               <label for="location">Lugar del Hospedaje</label>
+              <div class="alert alert-danger mt-2" [hidden]="place.valid || place.untouched">Este campo es obligatiorio</div>
+
           </div>
       </div>
-      <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+      <button class="btn waves-effect waves-light" type="submit" name="action" [disabled]="validacion()">Enviar
           <!-- <i class="material-icons right">send</i> -->
       </button>
   </form>
 </div>
+
+
