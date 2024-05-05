@@ -1,3 +1,11 @@
+
+.noMostrar{
+  display: none;
+}
+.mostrar{
+  display: block;
+}
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -82,7 +90,7 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    
+
   }
   .row{
     margin-left: 150px;
@@ -90,7 +98,7 @@
     background-color: rgb(239, 239, 239);
     border-radius: 15px;
   }
-  
+
   .input-field input[type=text],
   .input-field input[type=number],
   .input-field input[type=date] {
@@ -102,13 +110,13 @@
     padding: 10px 0;
     font-size: 16px;
   }
-  
+
   .input-field input[type=text]:focus,
   .input-field input[type=number]:focus,
   .input-field input[type=date]:focus {
     border-bottom-color: #26a69a;
   }
-  
+
   .input-field label {
     color: #555;
     font-size: 16px;
@@ -120,30 +128,30 @@
     border-radius: 5px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   }
-  
+
   .datepicker-controls .select-dropdown {
     color: #555;
   }
-  
+
   .datepicker-controls .btn-flat {
     color: #26a69a;
   }
-  
+
   .datepicker-calendar-container .datepicker-calendar th,
   .datepicker-calendar-container .datepicker-calendar td.is-selected {
     background-color: #26a69a;
   }
-  
+
   .datepicker-calendar-container .datepicker-calendar th,
   .datepicker-calendar-container .datepicker-calendar td {
     border-color: transparent;
   }
-  
+
   .datepicker-calendar-container .datepicker-calendar td.is-today {
     background-color: #e0f2f1;
   }
-  
-  
+
+
 
   .btn {
     background-color: #ef9595;
@@ -156,11 +164,12 @@
     transition: background-color 0.3s ease;
     margin-bottom: 40px;
   }
-  
+
   .btn:hover {
     background-color: #ee6e6e;
   }
-  
+
+
 
 /*Estilos carrusel*/
 
@@ -197,5 +206,4 @@ body {
 .card-1:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-
 
