@@ -130,31 +130,35 @@ a
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
-  
 
-.product-tumb {
-    position: relative;
-    width: 100%; 
-    height: 200px; 
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye los cards de manera uniforme a lo largo del contenedor */
   }
   
-  .product-tumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
+  .product-card {
+    width: calc(33.333% - 20px); /* Establece el ancho de cada card. Puedes ajustar el porcentaje según sea necesario */
+    margin-bottom: 20px; /* Agrega espacio entre los cards */
+    box-sizing: border-box; /* Incluye los márgenes en el tamaño total del elemento */
   }
   
-  .product-tumb {
-    width: 100%; /* Ajusta el ancho del contenedor al 100% del ancho disponible */
-    height: 300px; /* Ajusta la altura del contenedor según tus necesidades */
-    overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
-}
+  .product-card .div-sin-margen {
+    margin: 0; /* Elimina el margen interno del contenedor de imagen */
+  }
+  
+  .product-card img {
+    width: 100%; /* Ajusta la imagen para ocupar todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+  }
+  
+  
 
-.product-tumb img {
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
-    height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
-    object-fit: cover; /* Ajusta el tamaño y la forma de la imagen para que cubra el contenedor */
-    object-position: center; /* Centra la imagen dentro del contenedor */
-}
 
+  
+
+
+  .div-sin-margen {
+    margin: 0;
+  }
   
