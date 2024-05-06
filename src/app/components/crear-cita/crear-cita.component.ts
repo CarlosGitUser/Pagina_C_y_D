@@ -4,6 +4,7 @@ import { HeaderComponent } from '../header/header.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import Swal from 'sweetalert2';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-crear-cita',
@@ -21,8 +22,37 @@ export class CrearCitaComponent{
     email : '',
     fecha : '',
     hora : '',
-    //lugar : '',
-    canthuespedes : 0
+    lugar : '',
+    canthuespedes : 0,
+    dias : 0
+  }
+
+  // Apartado para obtener datos del servicio
+  constructor(public producstService: ProductsService){}
+
+  datos:any = [];
+  ruta  = "../../../assets/img/";
+  ngOnInit(){
+    console.log("Cargando ngOnInit...");
+    this.obtenerDatos();
+  }
+
+  obtenerDatos():void{
+    console.log("Entrando a funcion obtenerDatos");
+    this.producstService.retornar().subscribe({
+      next: this.successRequest.bind(this),
+      error: (err) => {console.log(err)}
+    });
+  }
+
+  successRequest(data:any):void{
+    console.log("Datos recibidos del API", data.products);
+    this.datos = data.products;
+  }
+
+  crearRuta(tipo:string, img:string):string{
+    console.log(this.ruta+tipo+"/"+img);
+    return this.ruta+tipo+"/"+img;
   }
 
   validacion():boolean{
@@ -32,10 +62,11 @@ export class CrearCitaComponent{
     let fecha = this.validarFecha(this.cita.fecha);
     let hora = this.validarHora(this.cita.hora);
     let huespedes = this.validarHuespedes(this.cita.canthuespedes);
+    let dias = this.validarDias(this.cita.dias);
 
     //let existe = this.citaExist(this.cita.fecha, this.cita.hora);
 
-    if(!name && !fecha && hora && !huespedes && !correo && tel){
+    if(!name && !fecha && hora && !huespedes && !correo && tel && dias){
       // console.log("Todos los campos son validos");
       return false
     }
@@ -82,6 +113,18 @@ export class CrearCitaComponent{
     return false;
   }
 
+  validarSelect(valor:number):boolean{
+    if(valor >= 1){
+      return true
+    } else return false;
+  }
+
+  validarDias(valor:number):boolean{
+    if(valor >= 1 && valor<=14){
+      return true;
+    } else return false;
+  }
+
   validarHuespedes(cantidad:number):boolean{
     if(typeof cantidad == 'number' && cantidad > 0 && cantidad<=16){
       //console.log(typeof cantidad + " dato " + cantidad);
@@ -122,7 +165,9 @@ export class CrearCitaComponent{
       email: this.cita.email,
       fecha: this.cita.fecha,
       hora: this.cita.hora,
-      canthuespedes: this.cita.canthuespedes
+      canthuespedes: this.cita.canthuespedes,
+      dias: this.cita.dias,
+      lugar : this.cita.lugar
     };
     const citasFromStorage = localStorage.getItem("citas");
     // Si hay citas en el localStorage, intentar analizarlas
@@ -134,7 +179,7 @@ export class CrearCitaComponent{
       }
     }
     citas.push(nuevaCita);
-
+    console.log("Nueva cita generada" + nuevaCita);
     localStorage.setItem("citas", JSON.stringify(citas));
     Swal.fire('Registro exitoso...', this.tituloAlerta, 'success')
     .then(()=>{
