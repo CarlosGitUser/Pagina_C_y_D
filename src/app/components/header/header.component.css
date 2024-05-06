@@ -32,3 +32,9 @@
   background-color: rgb(220, 50, 65); 
   border-color: rgb(220, 50, 65);
 }
+
+/* Estilos para resaltar el elemento activo en la barra de navegación */
+.navbar-nav .nav-link.active {
+  font-weight: bold; /* Hace que el texto del enlace sea más grueso */
+  color: rgb(220, 50, 65); /* Cambia el color del texto del enlace */
+}
