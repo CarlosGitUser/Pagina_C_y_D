@@ -4,22 +4,33 @@
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/home" routerLinkActive="active">Inicio</a>
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/crear-cita" routerLinkActive="active">Citas</a>
+          <a class="nav-link" routerLink="/crear-cita" routerLinkActive="active">Citas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-disabled="page" routerLink="/feed-back" routerLinkActive="active">Sugerencias</a>
+          <a class="nav-link" routerLink="/feed-back" routerLinkActive="active">Sugerencias</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/about-us" routerLinkActive="active">Acerca de</a>
+          <a class="nav-link" routerLink="/about-us" routerLinkActive="active">Acerca de</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/reportes" routerLinkActive="active">Reportes</a>
         </li>
       </ul>
+
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style=" width: 300px;">
         <button class="btn btn-outline-success" type="submit" >Search</button>
       </form>
+
+      <div class="d-flex form-inline my-2 my-lg-0" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search Name" aria-label="Search" style="border-radius: 80px; width: 300px; text-align: center;"
+        #buscar (keyup.enter)="buscarElemento(buscar.value)">
+        <button class="btn btn-outline-success" type="submit" (click)="buscarElemento(buscar.value)">Search</button>
+      </div>
+
     </div>
   </div>
 </nav>
