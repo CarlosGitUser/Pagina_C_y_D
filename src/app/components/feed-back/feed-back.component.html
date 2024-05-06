@@ -1,1 +1,83 @@
-<p>feed-back works!</p>
+<div class="container">
+    <div class="text">
+       ¿Tienes alguna Sujerencia?
+    </div>
+    <form action="#" #queja="ngForm">
+       <div class="form-row">
+          <div class="input-data">
+             <input type="text" required>
+             <div class="underline"></div>
+             <label for="">Nombres</label>
+          </div>
+          <div class="input-data">
+             <input type="text" required>
+             <div class="underline"></div>
+             <label for="">Apellidos</label>
+          </div>
+       </div>
+       <div class="form-row">
+          <div class="input-data">
+             <input type="text" required>
+             <div class="underline"></div>
+             <label for="">Email</label>
+          </div>
+
+       </div>
+       <div class="form-row">
+          <div class="input-data textarea">
+             <textarea rows="8" cols="80" required></textarea>
+             <br />
+             <div class="underline"></div>
+             <label for="">Escribe tu mensaje</label>
+          </div>
+       </div>
+       <div class="form-row submit-btn">
+          <div class="input-data">
+             <div class="inner"></div>
+             <input type="submit" value="Enviar" (click)="enviarQueja()" [disabled]="queja.invalid">
+          </div>
+       </div>
+    </form>
+</div>
+
+<div class="container">
+    <div class="text">
+       ¿Tienes alguna queja?
+    </div>
+    <form action="#" #sujerencia="ngForm">
+       <div class="form-row">
+          <div class="input-data">
+             <input type="text" required>
+             <div class="underline"></div>
+             <label for="">Nombres</label>
+          </div>
+          <div class="input-data">
+             <input type="text" required>
+             <div class="underline"></div>
+             <label for="">Apellidos</label>
+          </div>
+       </div>
+       <div class="form-row">
+          <div class="input-data">
+             <input type="text" required>
+             <div class="underline"></div>
+             <label for="">Email</label>
+          </div>
+
+       </div>
+       <div class="form-row">
+          <div class="input-data textarea">
+             <textarea rows="8" cols="80" required></textarea>
+             <br />
+             <div class="underline"></div>
+             <label for="">Escribe tu mensaje</label>
+          </div>
+       </div>
+       <div class="form-row submit-btn">
+          <div class="input-data">
+             <div class="inner"></div>
+             <input type="submit" value="Enviar" (click)="enviarSugerencia()"  [disabled]="sujerencia.invalid">
+          </div>
+       </div>
+    </form>
+</div>

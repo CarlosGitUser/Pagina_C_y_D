@@ -1,0 +1,27 @@
+<app-breadcrumb></app-breadcrumb>
+<div class="grid-container">
+@if (datos.lenght != 0 ) {
+  @for (i of datos; track i) {
+      <div class="product-card">
+        <!-- <div class="badge">Hot</div> -->
+        <div class="div-sin-margen">
+          <img [src]="crearRuta(i.tipo, i.img)" alt="image not found">
+        </div>
+        <div class="product-details">
+          <span class="product-catagory">{{i.tipo}}</span>
+          <h4><a href="#">{{i.titulo}}</a></h4>
+          <p>{{i.descripcion}}</p>
+          <div class="product-bottom-details">
+            <div class="product-price">{{i.precio}}</div>
+            <div class="product-links">
+              <a href="#"><i class="fa fa-heart"></i></a>
+              <a href="#"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  }
+</div>
+
+
