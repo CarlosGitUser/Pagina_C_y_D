@@ -1,13 +1,11 @@
 <main class="container">
     <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
-      <div class="col-lg-6 px-0">
-        <h1 class="display-4 fst-italic">Bienvenido, consigue una cita con nosotros!</h1>
-        <p class="lead my-3">"Encuentra tu hogar perfecto en cualquier rincón del mundo: reserva hoy mismo y empieza a crear recuerdos inolvidables."</p>
-        <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Reserva ahora</a></p>
-      </div>
+        <div class="col-lg-6 px-0 vh-100 d-flex flex-column justify-content-left align-items-center">
+            <h1 class="display-4 fst-italic text-center">Bienvenido, consigue una cita con nosotros!</h1>
+            <p class="lead my-3 text-center">"Encuentra tu hogar perfecto en cualquier rincón del mundo: reserva hoy mismo y empieza a crear recuerdos inolvidables."</p>
+            <p class="lead mb-0 text-center"><a href="#" class="text-body-emphasis fw-bold">Reserva ahora</a></p>
+        </div>        
     </div>
-
-
 </main>
 
 <div class="row">
@@ -49,6 +47,9 @@
               Minimo 1 huesped y maximo 16 huespedes</div>
           </div>
       </div>
+
+      
+    
       <div class="row">
           <div class="input-field col s6">
               <input id="email" type="email" class="validate" [(ngModel)]="cita.email" #email="ngModel" name="email">
@@ -65,6 +66,27 @@
               Escribe un numero de telefono valido</div>
           </div>
       </div>
+
+
+      
+      <div>
+        <label class="lab">Browser Select</label>
+        <select class="browser-default custom-select">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select>
+    </div>
+    
+    
+
+
+      <br>
+      <br>
+      
+      
+
       <!-- <div class="row">
           <div class="input-field col s12">
               <input id="location" type="text" class="validate" [(ngModel)] = "cita.lugar" name="lugar" #place="ngModel">
@@ -88,9 +110,9 @@
 <br>
 <br>
 
-<h1>Mas lugares maravillosos...</h1>
-<br>
-<br>
+
+<h1 style="margin-left: 45px; margin-bottom: 90px;">Mas lugares maravillosos...</h1>
+
 <div class="grid-wrapper">
 	<div>
 		<img src="https://images.unsplash.com/photo-1541845157-a6d2d100c931?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
@@ -147,3 +169,11 @@
 		<img src="https://images.unsplash.com/photo-1587897773780-fe72528d5081?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1489&amp;q=80" alt="" />
 	</div>
 </div>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('select');
+          var instances = M.FormSelect.init(elems, {});
+        });
+</script>
+

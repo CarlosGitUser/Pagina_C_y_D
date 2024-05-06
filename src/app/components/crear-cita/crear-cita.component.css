@@ -222,3 +222,12 @@ img {
 	grid-column: span 2;
 	grid-row: span 2;
 }
+.custom-select {
+  width: 318px; /* Ajusta el valor según lo desees */
+  margin-left: 160px;
+}
+.lab{
+  margin-left: 160px;
+  margin-bottom: 20px;
+}
+
