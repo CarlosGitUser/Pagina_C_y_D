@@ -1,5 +1,5 @@
 .navbar {
-  padding: 10px 0;
+  padding: 40px 0;
 }
 
 
@@ -8,7 +8,7 @@
 }
 
 .navbar-nav .nav-link {
-  padding: 10px 20px; 
+  padding: 10px 10px; 
   font-size: 25px;
 }
 
@@ -25,10 +25,16 @@
 .btn-outline-success {
   background-color: rgb(255, 74, 90); 
   border-color: rgb(255, 74, 90); 
-  border-radius: 20px; 
+  border-radius: 5px; 
 }
 
 .btn-outline-success:hover {
   background-color: rgb(220, 50, 65); 
   border-color: rgb(220, 50, 65);
+}
+
+/* Estilos para resaltar el elemento activo en la barra de navegación */
+.navbar-nav .nav-link.active {
+  font-weight: bold; /* Hace que el texto del enlace sea más grueso */
+  color: rgb(220, 50, 65); /* Cambia el color del texto del enlace */
 }
