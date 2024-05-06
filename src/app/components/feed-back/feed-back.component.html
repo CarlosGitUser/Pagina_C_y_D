@@ -1,8 +1,8 @@
 <div class="container">
     <div class="text">
-       Formulario para quejas
+       ¿Tienes alguna Sujerencia?
     </div>
-    <form action="#">
+    <form action="#" #queja="ngForm">
        <div class="form-row">
           <div class="input-data">
              <input type="text" required>
@@ -21,7 +21,7 @@
              <div class="underline"></div>
              <label for="">Email</label>
           </div>
-          
+
        </div>
        <div class="form-row">
           <div class="input-data textarea">
@@ -34,7 +34,7 @@
        <div class="form-row submit-btn">
           <div class="input-data">
              <div class="inner"></div>
-             <input type="submit" value="Enviar">
+             <input type="submit" value="Enviar" (click)="enviarQueja()" [disabled]="queja.invalid">
           </div>
        </div>
     </form>
@@ -42,9 +42,9 @@
 
 <div class="container">
     <div class="text">
-       Formulario para sugerencias
+       ¿Tienes alguna queja?
     </div>
-    <form action="#">
+    <form action="#" #sujerencia="ngForm">
        <div class="form-row">
           <div class="input-data">
              <input type="text" required>
@@ -63,7 +63,7 @@
              <div class="underline"></div>
              <label for="">Email</label>
           </div>
-          
+
        </div>
        <div class="form-row">
           <div class="input-data textarea">
@@ -76,7 +76,7 @@
        <div class="form-row submit-btn">
           <div class="input-data">
              <div class="inner"></div>
-             <input type="submit" value="Enviar">
+             <input type="submit" value="Enviar" (click)="enviarSugerencia()"  [disabled]="sujerencia.invalid">
           </div>
        </div>
     </form>

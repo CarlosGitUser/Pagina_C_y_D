@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { BreadcrumbComponent } from '../breadcrumb/breadcrumb.component';
 import { CardsComponent } from '../cards/cards.component';
 import { FooterComponent } from '../footer/footer.component';
@@ -16,6 +16,10 @@ import { AboutUsComponent } from '../about-us/about-us.component';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  constructor(private router:Router) { }
 
+  buscarElemento(valor:string){
+    this.router.navigate(['/vista', valor]);
+  }
 }
 

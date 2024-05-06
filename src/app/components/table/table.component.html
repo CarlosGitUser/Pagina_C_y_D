@@ -1,35 +1,52 @@
-<div class="striped">
-    <table>
-      <thead>
-        <tr class="principal">
-            <th>Nombre</th>
-            <th>Fecha</th>
-            <th>Hora</th>
-            <th>Correo</th>
-        </tr>
-      </thead>
-      <tbody>
+<div class="tabla-1">
+  <h2>Citas atendidas</h2>
+<table class="striped">
+  <thead>
+    <tr class="principal">
+      <th>Nombre </th>
+      <th>Correo</th>
+      <th>Fecha</th>
+      <th>Hora</th>
+    </tr>
+  </thead>
+  <tbody>
+  @for (cita of citas; track cita) {
+    @if (transformarDate(cita.fecha) < today) {
+    <tr>
+      <td>{{cita.nombre}}</td>
+      <td>{{cita.email}}</td>
+      <td>{{cita.fecha}}</td>
+      <td>{{cita.hora}}</td>
+    </tr>
+   }
+  }
+  </tbody>
+</table>
+</div>
+<hr>
+<h2>Citas por atender</h2>
+<div class="tabla-2">
+  <table class="striped">
+    <thead>
+      <tr class="principal">
+        <th>Nombre </th>
+        <th>Correo</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (cita of citas; track cita) {
+        @if (transformarDate(cita.fecha) >= today) {
         <tr>
-          <td>Alvin</td>
-          <td>Eclair</td>
-          <td>$0.87</td>
+          <td>{{cita.nombre}}</td>
+          <td>{{cita.email}}</td>
+          <td>{{cita.fecha}}</td>
+          <td>{{cita.hora}}</td>
         </tr>
-        <tr>
-          <td>Alan</td>
-          <td>Jellybean</td>
-          <td>$3.76</td>
-        </tr>
-        <tr>
-          <td>Jonathan</td>
-          <td>Lollipop</td>
-          <td>$7.00</td>
-        </tr>
-        <tr>
-          <td>Jonathan</td>
-          <td>Lollipop</td>
-          <td>$7.00</td>
-        </tr>
+       }
+      }
       </tbody>
-    </table>
-  </div>
-  
+  </table>
+</div>
+
