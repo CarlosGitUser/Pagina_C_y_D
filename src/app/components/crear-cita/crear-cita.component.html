@@ -28,7 +28,7 @@
               <label for="start_date">Fecha de la cita</label>
               <div class="alert alert-danger mt-2" [hidden]="date.untouched"
               [ngClass]="{'mostrar' : validarFecha(date.value), 'noMostrar' :!validarFecha(date.value)}"
-              >Por favor ingresa una fecha valida
+              >Fecha invalida o ya ocupada
             </div>
           </div>
           <div class="input-field col s6">
@@ -36,7 +36,8 @@
               <input id="start_time" type="time" class="timepicker" [(ngModel)]="cita.hora" name="hora" #hora="ngModel">
               <label for="start_time">Hora de inicio</label>
               <div class="alert alert-danger mt-2" [hidden]="hora.untouched"
-              [ngClass]="{'mostrar': !validarHora(hora.value), 'noMostrar' : validarHora(hora.value)}">Nuestro horario de atencion es de 8am a 8pm</div>
+              [ngClass]="{'mostrar': !validarHora(hora.value), 'noMostrar' : validarHora(hora.value)}">
+              hora invalida o ya ocupada. Horario de atencion de 8am a 8pm </div>
           </div>
       </div>
       <div class="row">

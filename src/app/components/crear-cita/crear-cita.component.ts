@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import Swal from 'sweetalert2';
 
-
 @Component({
   selector: 'app-crear-cita',
   standalone: true,
@@ -14,6 +13,7 @@ import Swal from 'sweetalert2';
   styleUrl: './crear-cita.component.css'
 })
 export class CrearCitaComponent{
+
   tituloAlerta:string = "Cita hecha de manera exitosa";
   cita = {
     nombre : '',
@@ -33,6 +33,8 @@ export class CrearCitaComponent{
     let hora = this.validarHora(this.cita.hora);
     let huespedes = this.validarHuespedes(this.cita.canthuespedes);
 
+    //let existe = this.citaExist(this.cita.fecha, this.cita.hora);
+
     if(!name && !fecha && hora && !huespedes && !correo && tel){
       // console.log("Todos los campos son validos");
       return false
@@ -45,9 +47,10 @@ export class CrearCitaComponent{
       let auxDate = fechaString.split('-');
       //console.log(auxDate);
       let fecha = new Date(parseInt(auxDate[0]), parseInt(auxDate[1])-1, parseInt(auxDate[2]));
+      let existeCita = this.citaNotExist(fechaString, this.cita.hora);
       //console.log("Fecha recibida: " + fecha);
       let fechaHoy = new Date();
-      if(fecha >= fechaHoy){
+      if(fecha >= fechaHoy && existeCita){
         //console.log("La fecha recibida es menor a la actual");
         return false
       } else return true;
@@ -70,7 +73,10 @@ export class CrearCitaComponent{
       let myHora = hora.split(":");
       if(parseInt(myHora[0]) >= 8 && parseInt(myHora[0])<=20){
         //console.log(myHora);
-        return true;
+        let citaExiste = this.citaNotExist(this.cita.hora, hora);
+        if(citaExiste)
+          return true;
+        else return false;
       }
     }
     return false;
@@ -138,4 +144,34 @@ export class CrearCitaComponent{
     });
 
   }
+
+  citaNotExist(fecha: string, hora: string): boolean {
+    let citas: Array<any> = [];
+    let citasLocalStorage = localStorage.getItem("citas");
+
+    if (citasLocalStorage) {
+      try {
+        citas = JSON.parse(citasLocalStorage);
+
+        // Itera sobre cada cita en el array
+        for (let cita of citas) {
+          console.log("Fecha de la cita: " + cita.fecha);
+          console.log("Hora de la cita" + cita.hora);
+          // Verifica si la fecha y hora coinciden con los parámetros
+          if (cita.fecha === fecha) {
+            if((cita.hora[0]+cita.hora[1]) == (hora[0]+hora[1])){
+              console.log("Se las fechas son iguales");
+              return false;
+            }
+            return true; // Es la misma fecha pero diferente hora
+          }
+        }
+      } catch (err) {
+        console.log("Error en funcion citaExist : " + err);
+      }
+    }
+
+    return true; // La fecha ingresada esta disponible
+  }
+
 }
