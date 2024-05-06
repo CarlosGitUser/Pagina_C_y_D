@@ -6,18 +6,22 @@
     <tr class="principal">
       <th>Nombre </th>
       <th>Correo</th>
-      <th>Fecha</th>
-      <th>Hora</th>
+      <th>Fecha de reunion</th>
+      <th>Hora de reunion</th>
+      <th>Lugar solicitado</th>
+      <th>Dias solicitados</th>
     </tr>
   </thead>
   <tbody>
   @for (cita of citas; track cita) {
     @if (transformarDate(cita.fecha) < today) {
     <tr>
-      <td>{{cita.nombre}}</td>
+      <td>{{cita.nombre | uppercase}}</td>
       <td>{{cita.email}}</td>
-      <td>{{cita.fecha}}</td>
+      <td>{{cita.fecha | date:'d/M/y'}}</td>
       <td>{{cita.hora}}</td>
+      <td>{{getLugar(cita.lugar)}}</td>
+      <td>{{cita.dias}}</td>
     </tr>
    }
   }
@@ -32,18 +36,22 @@
       <tr class="principal">
         <th>Nombre </th>
         <th>Correo</th>
-        <th>Fecha</th>
-        <th>Hora</th>
+        <th>Fecha de reunion</th>
+        <th>Hora de reunion</th>
+        <th>Lugar solicitado</th>
+        <th>Dias solicitados</th>
       </tr>
     </thead>
     <tbody>
       @for (cita of citas; track cita) {
         @if (transformarDate(cita.fecha) >= today) {
         <tr>
-          <td>{{cita.nombre}}</td>
+          <td>{{cita.nombre | uppercase}}</td>
           <td>{{cita.email}}</td>
-          <td>{{cita.fecha}}</td>
+          <td>{{cita.fecha | date:'mediumDate'}}</td>
           <td>{{cita.hora}}</td>
+          <td>{{getLugar(cita.lugar)}}</td>
+          <td>{{cita.dias}}</td>
         </tr>
        }
       }

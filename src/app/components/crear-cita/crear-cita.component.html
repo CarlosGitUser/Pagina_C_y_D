@@ -1,10 +1,10 @@
-
-    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis  " >
+<div class="p-4 p-md-5 mb-4 rounded text-body-emphasis  " >
         <div class="col-lg-6 px-0 d-flex flex-column justify-content-center align-items-center">
             <h1 class="display-4 text-center" style="margin-left: 20px; font-weight:400;color: white;">Bienvenido, consigue una cita con nosotros!</h1>
             <p class="lead my-3 " style="font-size: 22px; color:white; margin-left: 110px;">"Encuentra tu hogar perfecto en cualquier rincón del mundo: reserva hoy mismo y empieza a crear recuerdos inolvidables."</p>
             <p class="lead mb-0 text-center"><a href="#" class=" fw-bold" style="font-size: 22px; color:white; margin-left: 80px; "><u>Reserva ahora</u></a></p>
         </div>        
+
     </div>
 
 
@@ -43,13 +43,20 @@
               <input id="quantity" type="number" class="validate" [(ngModel)] = "cita.canthuespedes" name="canthuespedes" #huespedes="ngModel">
               <label for="quantity">Cantidad de huespedes</label>
               <div class="alert alert-danger mt-2" [hidden]="huespedes.untouched"
-              [ngClass]="{'mostrar' : validarHuespedes(huespedes.value), 'noMostrar' : !validarHora(huespedes.value)}">
+              [ngClass]="{'mostrar' : validarHuespedes(huespedes.value), 'noMostrar' : !validarHuespedes(huespedes.value)}">
               Minimo 1 huesped y maximo 16 huespedes</div>
           </div>
+          <div class="input-field col s6">
+            <input id="dias" type="number" class="validate" [(ngModel)]="cita.dias" #dias="ngModel" name="dias">
+            <label for="dias">Cantidad de dias de hospedaje</label>
+            <div class="alert alert-danger mt-2" [hidden]="dias.untouched"
+            [ngClass]="{'mostrar' : !validarDias(dias.value), 'noMostrar' : validarDias(dias.value)}">
+            Minimo 1 dia de hospedaje, maximo 14 dias de hospedaje</div>
+        </div>
       </div>
 
-      
-    
+
+
       <div class="row">
           <div class="input-field col s6">
               <input id="email" type="email" class="validate" [(ngModel)]="cita.email" #email="ngModel" name="email">
@@ -68,8 +75,9 @@
       </div>
 
 
-      
+
       <div>
+
         <label class="lab">Elige...</label>
         <select class="browser-default custom-select">
             <option value="" disabled selected>Elige una opción</option>
@@ -81,6 +89,40 @@
 
       <br>
       <br>
+    <div>
+        <label class="lab">Selecciona el luagar</label>
+        <select class="browser-default custom-select" [(ngModel)]="cita.lugar" name="lugares" #lugar="ngModel">
+          <option value="" disabled selected>Selecciona una opcion</option>
+          @if (datos.lenght!= 0 ){
+            @for (i of datos; track i) {
+              <option [value]="i.id">{{i.titulo}}</option>
+            }
+          }
+        </select>
+    </div>
+
+    <div class="container">
+      @if (lugar.value >= 1) {
+        @for (i of datos; track i) {
+          @if (i.id == lugar.value) {
+            <h3>Datos del lugar seleccionado</h3>
+            <p>Tipo de lugar: {{i.tipo}}</p>
+            <p>Titulo: {{i.titulo}}</p>
+            <p>Descripcion :{{i.descripcion}}</p>
+            <p>Precio <strong>{{i.precio}}</strong></p>
+
+            <img [src]="crearRuta(i.tipo, i.img)" alt="">
+          }
+        }
+      }
+    </div>
+
+
+      <br>
+      <br>
+
+
+
 
       <!-- <div class="row">
           <div class="input-field col s12">

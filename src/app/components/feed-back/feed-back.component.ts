@@ -15,7 +15,7 @@ export class FeedBackComponent {
       title: "!!!Gracias por tu comentario!!!",
       text: "Tomaremos en cuenta tu opinion para mejorar nuestra pagina",
       icon: "success"
-    });
+    }).then(()=>{window.location.reload();});
   }
 
   enviarQueja(){
@@ -23,6 +23,6 @@ export class FeedBackComponent {
       title: "Lamentamos la molestia",
       text: "Tus comentarios nos ayudan a mejorar nuestra pagina y hacer la experiencia mas llevadera",
       icon: "info"
-    });
+    }).then(()=>{window.location.reload();});
   }
 }
