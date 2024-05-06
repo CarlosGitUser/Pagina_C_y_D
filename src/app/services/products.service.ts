@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { take } from 'rxjs';
+import { take, map } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +12,15 @@ export class ProductsService {
  urlAPI: string = "https://beasap.free.beeceptor.com";
   constructor(private http: HttpClient) { }
 
-  retornar(){
-    return this.http.get(this.urlAPI).pipe(take(1));
+  retornar() {
+    return this.http.get<any[]>(this.urlAPI).pipe(
+      take(1)
+    );
+  }
+
+    buscarPorTipo(tipo: string) {
+    return this.retornar().pipe(
+      map(products => products.filter(product => product.tipo === tipo))
+    );
   }
 }
