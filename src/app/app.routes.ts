@@ -4,6 +4,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { CrearCitaComponent } from './components/crear-cita/crear-cita.component';
 import { FeedBackComponent } from './components/feed-back/feed-back.component';
 import { ReportesComponent } from './components/reportes/reportes.component';
+import { TableComponent } from './components/table/table.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -11,5 +12,5 @@ export const routes: Routes = [
   {path: 'about-us', component: AboutUsComponent},
   {path: 'feed-back', component: FeedBackComponent},
   {path: 'crear-cita', component: CrearCitaComponent},
-  {path: 'reportes', component : ReportesComponent}
+  {path: 'reportes', component : TableComponent}
 ];
