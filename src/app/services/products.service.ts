@@ -11,7 +11,8 @@ export class ProductsService {
  // urlAPI: string = "https://bestapi.free.beeceptor.com";
  // urlAPI: string = "https://beasap.free.beeceptor.com";
  //urlAPI : string = "https://apiproyecto.free.beeceptor.com";
-   urlAPI : string = "https://locapi.free.beeceptor.com";
+  //urlAPI : string = "https://saapi.free.beeceptor.com";
+   urlAPI : string = "https://proyecto.free.beeceptor.com";
   constructor(private http: HttpClient) { }
 
   retornar() {
