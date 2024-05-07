@@ -31,7 +31,7 @@ export class CrearCitaComponent{
   constructor(public producstService: ProductsService){}
 
   datos:any = [];
-  ruta  = "../../../assets/img/";
+  ruta  = "assets/img/";
   ngOnInit(){
     console.log("Cargando ngOnInit...");
     this.obtenerDatos();
