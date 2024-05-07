@@ -11,6 +11,10 @@ import { HijoComponent } from '../hijo/hijo.component';
   styleUrl: './padre.component.css'
 })
 export class PadreComponent {
+
+  ngOnInit(){
+
+  }
   miMensaje ="";
   myNombre = "";
   mensajes: string[] = [];
@@ -29,10 +33,10 @@ export class PadreComponent {
     localStorage.setItem("mensajes", JSON.stringify(this.mensajes));
   }
 
-  getMensajes():boolean{
+  getMensajes():void{
     const cosas = localStorage.getItem("mensajes");
     if(cosas){
-      return true;
-    } else return false;
+      this.mensajes = JSON.parse(cosas);
+    }
   }
 }

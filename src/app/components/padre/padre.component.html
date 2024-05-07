@@ -4,9 +4,12 @@
   <div>
     <app-hijo [mensaje]="msg.value" (unMensaje)="addMensaje($event)"></app-hijo>
   </div>
-
-  @for (i of mensajes; track i;let n = $index) {
-    
-    <p>Mensaje {{n+1}}:  {{i}}</p>
+  @for (item of mensajes; track item) {
+    <p>{{item}}</p>
+  }
+  @if (getMensajes() != null) {
+    @for (msg of mensajes; track msg; let i = $index) {
+      <p>Mensaje numero {{i}}: msg</p>
+    }
   }
 </div>
