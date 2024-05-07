@@ -1,20 +1,22 @@
-@if (misDatos.length != 0) {
-  <h3>Citas registradas del usuario {{myValor}}</h3>
-  @for (dato of misDatos; track dato; let i = $index) {
-    <p>Datos registrados en la cita <strong>{{i+1}}</strong></p>
-    <p>Correo: {{dato.email}}</p>
-    <p>Telefono: {{dato.telefono}}</p>
-    <p>Fecha de inicio {{dato.fecha}}</p>
-    <p>Hora de inicio {{dato.hora}}</p>
-    <p>Cantidad de dias de hospedaje</p>
-    <p>Hay confirmados {{dato.canthuespedes}} huespede/s</p>
-    <p>Lugar seleccionado:</p>
-    <hr>
-  }
-}@else {
-  <div class="row">
-    <div class="co-md-12">
-      <div class="alert alert-info" role="alert" style="text-align: center;">No existe resultado para <strong>"{{myValor}}"</strong></div>
+<div class="container">
+  @if (misDatos.length != 0) {
+    <div class="cita-container">
+      <h3 class="cita-title">Citas registradas del usuario {{myValor}}</h3>
+      @for (dato of misDatos; track dato; let i = $index) {
+        <div class="cita-dato">
+          <p>Datos registrados en la cita <strong>{{i+1}}</strong></p>
+          <p>Correo: {{dato.email}}</p>
+          <p>Telefono: {{dato.telefono}}</p>
+          <p>Fecha de inicio {{dato.fecha}}</p>
+          <p>Hora de inicio {{dato.hora}}</p>
+          <p>Cantidad de días de hospedaje</p>
+          <p>Hay confirmados {{dato.canthuespedes}} huésped/es</p>
+          <p>Lugar seleccionado:</p>
+          <hr>
+        </div>
+      }
     </div>
-  </div>
-}
+  }@else {
+    <div class="alert alert-info" role="alert">No existe resultado para <strong>"{{myValor}}"</strong></div>
+  }
+</div>
