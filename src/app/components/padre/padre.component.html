@@ -1,6 +1,6 @@
 <div class="container">
-  <h3>Ingresa cualquier duda en este espacio</h3>
-  <input type="text" [(ngModel)]="aux" #msg="ngModel" name="mensaje">
+  <h3 style="text-align: left; font-size: 55px; font-weight:bold ; margin-bottom: 90px; ">¿Cúal es tu duda?</h3>
+  <input id="inpu" style="width: 500px; text-align: center;"  type="text" [(ngModel)]="aux" #msg="ngModel" name="mensaje">
   <div>
     <app-hijo [mensaje]="msg.value" (unMensaje)="addMensaje($event)"></app-hijo>
   </div>
