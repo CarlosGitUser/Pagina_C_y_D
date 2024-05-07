@@ -57,20 +57,19 @@ export class TableComponent {
   getLugar(id:string):string{
     let lugar ="";
     switch(id){
-      case ("1"): lugar = "TestLugar"; break;
-      case ("2"): lugar = ""; break;
-      case ("3"): lugar = ""; break;
-      case ("4"): lugar = ""; break;
-      case ("5"): lugar = ""; break;
-      case ("6"): lugar = ""; break;
-      case ("7"): lugar = ""; break;
-      case ("8"): lugar = ""; break;
-      case ("9"): lugar = ""; break;
-      case ("10"): lugar = ""; break;
-      case ("11"): lugar = ""; break;
-      case ("12"): lugar = ""; break;
-      default: lugar = "Lugar no encontrado";
-
+      case ("1"): lugar = "Ajujic, Mexico"; break;
+      case ("2"): lugar = "Costa Careyes, Mexico"; break;
+      case ("3"): lugar = "Jalisco, Mexico"; break;
+      case ("4"): lugar = "Mazamitla, Mexico"; break;
+      case ("5"): lugar = "Puerta del Zapatero, Mexico"; break;
+      case ("6"): lugar = "San Juan Cosala, Mexico"; break;
+      case ("7"): lugar = "Guadalajara, Mexico"; break;
+      case ("8"): lugar = "Guadalajara, Mexico"; break;
+      case ("9"): lugar = "Guadalajara, Mexico"; break;
+      case ("10"): lugar = "Puerto Vallarta, Mexico"; break;
+      case ("11"): lugar = "Puerto Vallarta, Mexico"; break;
+      case ("12"): lugar = "Zapopan, Mexico"; break;
+      default: lugar = "Lugar no encontrado"; break;
     }
     return lugar;
   }
