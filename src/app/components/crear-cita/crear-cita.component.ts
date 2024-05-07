@@ -66,7 +66,7 @@ export class CrearCitaComponent{
 
     //let existe = this.citaExist(this.cita.fecha, this.cita.hora);
 
-    if(!name && !fecha && hora && !huespedes && !correo && tel && dias){
+    if(!name&& !fecha  && hora && !huespedes && !correo && tel && dias){
       // console.log("Todos los campos son validos");
       return false
     }
@@ -184,7 +184,7 @@ export class CrearCitaComponent{
     Swal.fire('Registro exitoso...', this.tituloAlerta, 'success')
     .then(()=>{
       // Recargar la pagina despues de crear la cita
-      window.scrollTo(0, 0);
+      //window.scrollTo(0, 0);
       window.location.reload();
     });
 
