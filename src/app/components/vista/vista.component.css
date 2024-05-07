@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffc4c4; /* Puedes cambiar este color de fondo si lo deseas */
+  }
+  
+  /* Tus estilos previos para citas y alertas */
+  .cita-container {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #f8f9fa;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cita-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333333;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .cita-dato {
+    margin-bottom: 15px;
+  }
+  
+  .cita-dato p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666666;
+  }
+  
+  .alert {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+  }
+  
