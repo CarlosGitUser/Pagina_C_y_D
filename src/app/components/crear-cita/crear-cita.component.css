@@ -154,7 +154,7 @@
 
 
   .btn {
-    background-color: #ef9595;
+    background-color: #f08383;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -163,10 +163,12 @@
     font-size: 16px;
     transition: background-color 0.3s ease;
     margin-bottom: 40px;
+    margin-top: 50px;
+
   }
 
   .btn:hover {
-    background-color: #ee6e6e;
+    background-color: #ec6262;
   }
 
 
@@ -229,5 +231,10 @@ img {
 .lab{
   margin-left: 160px;
   margin-bottom: 20px;
+  font-size: 15px;
 }
 
+
+.p-4.p-md-5.mb-4.rounded.text-body-emphasis {
+  background-color:  rgb(255, 74, 90); /* Cambia el color de fondo según lo desees */
+}
