@@ -1,0 +1,143 @@
+{
+  "configVersion": 1,
+  "timestamp": 1717693048422,
+  "index": "/Pagina_C_y_D/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/Pagina_C_y_D/favicon.ico",
+        "/Pagina_C_y_D/index.html",
+        "/Pagina_C_y_D/main-3YMKP6Z2.js",
+        "/Pagina_C_y_D/manifest.webmanifest",
+        "/Pagina_C_y_D/polyfills-RT5I6R6G.js",
+        "/Pagina_C_y_D/scripts-GLJE6ILA.js",
+        "/Pagina_C_y_D/styles-WTWMNIVR.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/Pagina_C_y_D/assets/icons/icon-128x128.png",
+        "/Pagina_C_y_D/assets/icons/icon-144x144.png",
+        "/Pagina_C_y_D/assets/icons/icon-152x152.png",
+        "/Pagina_C_y_D/assets/icons/icon-192x192.png",
+        "/Pagina_C_y_D/assets/icons/icon-384x384.png",
+        "/Pagina_C_y_D/assets/icons/icon-512x512.png",
+        "/Pagina_C_y_D/assets/icons/icon-72x72.png",
+        "/Pagina_C_y_D/assets/icons/icon-96x96.png",
+        "/Pagina_C_y_D/assets/img/Airbnb_Logo_Bélo.svg.png",
+        "/Pagina_C_y_D/assets/img/Asly.jpg",
+        "/Pagina_C_y_D/assets/img/airbnb.svg",
+        "/Pagina_C_y_D/assets/img/carlos.jpg",
+        "/Pagina_C_y_D/assets/img/casa/ajijic.webp",
+        "/Pagina_C_y_D/assets/img/casa/costaCareyes.webp",
+        "/Pagina_C_y_D/assets/img/casa/jalisco.webp",
+        "/Pagina_C_y_D/assets/img/casa/mazamitla.webp",
+        "/Pagina_C_y_D/assets/img/casa/puertaZapatero.webp",
+        "/Pagina_C_y_D/assets/img/casa/sanJuan.webp",
+        "/Pagina_C_y_D/assets/img/departamento/guadalajara.webp",
+        "/Pagina_C_y_D/assets/img/departamento/guadalajara2.webp",
+        "/Pagina_C_y_D/assets/img/departamento/guadalajara3.webp",
+        "/Pagina_C_y_D/assets/img/departamento/puertoVallarta.webp",
+        "/Pagina_C_y_D/assets/img/departamento/puertoVallarta2.webp",
+        "/Pagina_C_y_D/assets/img/departamento/zapopan.webp",
+        "/Pagina_C_y_D/assets/img/favicon-32x32.png",
+        "/Pagina_C_y_D/assets/img/japon.jpg",
+        "/Pagina_C_y_D/assets/img/jaz1.jpg",
+        "/Pagina_C_y_D/assets/img/logo.png",
+        "/Pagina_C_y_D/assets/img/ny.jpg",
+        "/Pagina_C_y_D/assets/img/pngwing.com.png",
+        "/Pagina_C_y_D/assets/img/ven.jpg",
+        "/Pagina_C_y_D/assets/img/venecia.jpg",
+        "/Pagina_C_y_D/assets/img/vi.jpg",
+        "/Pagina_C_y_D/media/ui-icons_444444_256x240-OK3MKPUY.png",
+        "/Pagina_C_y_D/media/ui-icons_555555_256x240-RABPRDJ5.png",
+        "/Pagina_C_y_D/media/ui-icons_777620_256x240-PH42MWFT.png",
+        "/Pagina_C_y_D/media/ui-icons_777777_256x240-MIZ33YHS.png",
+        "/Pagina_C_y_D/media/ui-icons_cc0000_256x240-ZD5DMYF2.png",
+        "/Pagina_C_y_D/media/ui-icons_ffffff_256x240-XS7M5G4A.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/Pagina_C_y_D/assets/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
+    "/Pagina_C_y_D/assets/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
+    "/Pagina_C_y_D/assets/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
+    "/Pagina_C_y_D/assets/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
+    "/Pagina_C_y_D/assets/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
+    "/Pagina_C_y_D/assets/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
+    "/Pagina_C_y_D/assets/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
+    "/Pagina_C_y_D/assets/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
+    "/Pagina_C_y_D/assets/img/Airbnb_Logo_Bélo.svg.png": "fdbd7c9444340d20a01c95f32b905b8540aeac1a",
+    "/Pagina_C_y_D/assets/img/Asly.jpg": "7592e13e87276dd7cccf7ef037f132b8905f167a",
+    "/Pagina_C_y_D/assets/img/airbnb.svg": "ecdce3584abbf9b9a98178f5ea7618943feaed84",
+    "/Pagina_C_y_D/assets/img/carlos.jpg": "414086ab04cd574e3586e1f26f6f222288d1469f",
+    "/Pagina_C_y_D/assets/img/casa/ajijic.webp": "2946a5bdcb7c68d7433f718b70073b1ac9d13660",
+    "/Pagina_C_y_D/assets/img/casa/costaCareyes.webp": "187bffb84a55342b131562c37a0d5f3ffb00f3e5",
+    "/Pagina_C_y_D/assets/img/casa/jalisco.webp": "02c74157fcdcafddb58c88ec9d2117ecb887ba9f",
+    "/Pagina_C_y_D/assets/img/casa/mazamitla.webp": "102ec03410534f51bc1d9ef9b6cedbe62c4be48a",
+    "/Pagina_C_y_D/assets/img/casa/puertaZapatero.webp": "cc601246965f39c03a4709ae9bac626caf74ac16",
+    "/Pagina_C_y_D/assets/img/casa/sanJuan.webp": "98a8ff9c922a6921ed269697231e7de78ed25e7d",
+    "/Pagina_C_y_D/assets/img/departamento/guadalajara.webp": "85c72fce8d6782a4caf6167c5289bdcf27a913cf",
+    "/Pagina_C_y_D/assets/img/departamento/guadalajara2.webp": "eb6ff4c855254bf74a5e5e7bdc5b4625ff54783a",
+    "/Pagina_C_y_D/assets/img/departamento/guadalajara3.webp": "55880f3c6a9c5a3669f416920b1f4e9c5175afff",
+    "/Pagina_C_y_D/assets/img/departamento/puertoVallarta.webp": "80e550d90a2ab25114a21beffe0eb6dfc2ee446a",
+    "/Pagina_C_y_D/assets/img/departamento/puertoVallarta2.webp": "2392834ac01cfafdfcd9069ebb43f785b29f7590",
+    "/Pagina_C_y_D/assets/img/departamento/zapopan.webp": "91be88302a1c3d260d8ff7de75edf7a6e309a4f5",
+    "/Pagina_C_y_D/assets/img/favicon-32x32.png": "ce21067b56596034ca7894815f065ac63498a82b",
+    "/Pagina_C_y_D/assets/img/japon.jpg": "7922b380216f7555853c098854bb50edf71a2a73",
+    "/Pagina_C_y_D/assets/img/jaz1.jpg": "f64c9bfcc8a86165b293f6f8c52ddd23711d6126",
+    "/Pagina_C_y_D/assets/img/logo.png": "8b8224cff40a75460c796883085281db6fcf2165",
+    "/Pagina_C_y_D/assets/img/ny.jpg": "91a9fa3171f59380c71dcaef2bc0e31e6dce334e",
+    "/Pagina_C_y_D/assets/img/pngwing.com.png": "9db34c8ca188e04d2539ea6c80ab3c644dc8e4e8",
+    "/Pagina_C_y_D/assets/img/ven.jpg": "09795f7f7793464425ad7e0a77e38aa723ab6214",
+    "/Pagina_C_y_D/assets/img/venecia.jpg": "9c8b1d92f9e39cca16d289329eb3e1e237f155fe",
+    "/Pagina_C_y_D/assets/img/vi.jpg": "5bb014d23ed6be4ab45f71997c45a207e8c84563",
+    "/Pagina_C_y_D/favicon.ico": "b2ebdc81acd6017cf21fbdfa632fb5b5474e07fb",
+    "/Pagina_C_y_D/index.html": "8cc8c87286c09a96c13cc7a15edb18b981ea4c5a",
+    "/Pagina_C_y_D/main-3YMKP6Z2.js": "2c17dc79132c1378c8641dfe3a9c9259956389d4",
+    "/Pagina_C_y_D/manifest.webmanifest": "ee91a6859290ea7656ec8d4cc8b45ffcd928e1ba",
+    "/Pagina_C_y_D/media/ui-icons_444444_256x240-OK3MKPUY.png": "3ffa878d00d5e632f4f4260eb390334466caf653",
+    "/Pagina_C_y_D/media/ui-icons_555555_256x240-RABPRDJ5.png": "da9729357e8869727a8bab29692c08a32214a091",
+    "/Pagina_C_y_D/media/ui-icons_777620_256x240-PH42MWFT.png": "ab45e937ea3f895f719ec500d1436ccb299a3396",
+    "/Pagina_C_y_D/media/ui-icons_777777_256x240-MIZ33YHS.png": "4bb281f1b123a00bbaaef2e5cc94f02038f5fb05",
+    "/Pagina_C_y_D/media/ui-icons_cc0000_256x240-ZD5DMYF2.png": "bc7ace0ae605b919752a2499ccb4aad8c3fde4a0",
+    "/Pagina_C_y_D/media/ui-icons_ffffff_256x240-XS7M5G4A.png": "30d6b532df301efd903095db815dbadd5d4adddb",
+    "/Pagina_C_y_D/polyfills-RT5I6R6G.js": "fe9f024576f21ff6314cf8f8332cde58b9a12416",
+    "/Pagina_C_y_D/scripts-GLJE6ILA.js": "c0fd22fd0b94d31803a768a7d43bd7f11f382f11",
+    "/Pagina_C_y_D/styles-WTWMNIVR.css": "d481f0c05c87990d655a9c8d751e41aa0c835e78"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
